@@ -1,0 +1,423 @@
+{
+  "PM_KISAN": {
+    "full_name": "Pradhan Mantri Kisan Samman Nidhi",
+    "bhojpuri_name": "प्रधानमंत्री किसान सम्मान निधि",
+    "assamese_name": "প্ৰধানমন্ত্ৰী কিষাণ সন্মান নিধি",
+    "domain": "agriculture",
+    "benefit": "₹6000 per year (3 installments of ₹2000)",
+    "benefit_bhojpuri": "साल में 6000 रुपया, तीन किस्त में (हर किस्त 2000 रुपया)",
+    "benefit_assamese": "বছৰত ৬০০০ টকা, তিনিটা কিস্তিত (প্ৰতিটো কিস্তিত ২০০০ টকা)",
+    "eligibility": {
+      "land_ownership": "Must own agricultural land",
+      "family_type": "Small and marginal farmer family",
+      "bank_account": "Aadhaar-linked bank account required",
+      "exclusions": ["Government employees", "Income tax payers", "Pensioners above 10000/month"]
+    },
+    "eligibility_bhojpuri": "किसान परिवार होखे के चाही, खेत होखे के चाही, आधार से बैंक खाता जुड़ल होखे के चाही",
+    "eligibility_assamese": "কৃষক পৰিয়াল হ'ব লাগিব, মাটি থাকিব লাগিব, আধাৰৰ সৈতে বেংক একাউণ্ট লগোৱা থাকিব লাগিব",
+    "documents": [
+      "Aadhaar Card",
+      "Land ownership document (Khatian/Khatauni)",
+      "Bank passbook (with IFSC)",
+      "Mobile number linked to Aadhaar",
+      "Passport size photo"
+    ],
+    "documents_bhojpuri": [
+      "आधार कार्ड",
+      "जमीन के कागज (खतियान/खतौनी)",
+      "बैंक पासबुक (IFSC के साथ)",
+      "आधार से जुड़ल मोबाइल नंबर",
+      "पासपोर्ट साइज फोटो"
+    ],
+    "documents_assamese": [
+      "আধাৰ কাৰ্ড",
+      "মাটিৰ কাগজ (খতিয়ান/খতাউনি)",
+      "বেংক পাছবুক (IFSC সৈতে)",
+      "আধাৰৰ সৈতে সংযুক্ত মোবাইল নম্বৰ",
+      "পাছপ'ৰ্ট সাইজ ফটো"
+    ],
+    "apply_steps": [
+      "Step 1: Go to pmkisan.gov.in OR visit nearest CSC center",
+      "Step 2: Click on 'New Farmer Registration'",
+      "Step 3: Enter Aadhaar number and mobile number",
+      "Step 4: Fill personal details (name, DOB, category)",
+      "Step 5: Enter bank account details (account number + IFSC)",
+      "Step 6: Upload land documents",
+      "Step 7: Submit and note registration number"
+    ],
+    "apply_steps_bhojpuri": [
+      "कदम 1: pmkisan.gov.in पर जाव या नजदीकी CSC सेंटर जाव",
+      "कदम 2: 'नया किसान पंजीकरण' पर क्लिक करव",
+      "कदम 3: आधार नंबर और मोबाइल नंबर डालव",
+      "कदम 4: निजी जानकारी भरव (नाम, जन्मतिथि, वर्ग)",
+      "कदम 5: बैंक खाता जानकारी डालव",
+      "कदम 6: जमीन के कागज अपलोड करव",
+      "कदम 7: सबमिट करव और रजिस्ट्रेशन नंबर नोट करव"
+    ],
+    "apply_steps_assamese": [
+      "পদক্ষেপ ১: pmkisan.gov.in লৈ যাওক বা নিকটৱৰ্তী CSC কেন্দ্ৰলৈ যাওক",
+      "পদক্ষেপ ২: 'নতুন কৃষক পঞ্জীয়ন'ত ক্লিক কৰক",
+      "পদক্ষেপ ৩: আধাৰ নম্বৰ আৰু মোবাইল নম্বৰ দিয়ক",
+      "পদক্ষেপ ৪: ব্যক্তিগত তথ্য পূৰণ কৰক",
+      "পদক্ষেপ ৫: বেংক একাউণ্টৰ তথ্য দিয়ক",
+      "পদক্ষেপ ৬: মাটিৰ কাগজ আপলোড কৰক",
+      "পদক্ষেপ ৭: জমা দিয়ক আৰু পঞ্জীয়ন নম্বৰ টোকা কৰক"
+    ],
+    "helpline": "155261 / 011-24300606",
+    "website": "https://pmkisan.gov.in",
+    "tags": ["farmer", "agriculture", "money", "subsidy"]
+  },
+  "AYUSHMAN_BHARAT": {
+    "full_name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
+    "bhojpuri_name": "आयुष्मान भारत - जन आरोग्य योजना",
+    "assamese_name": "আয়ুষ্মান ভাৰত - জন আৰোগ্য যোজনা",
+    "domain": "healthcare",
+    "benefit": "₹5 lakh per year health insurance per family",
+    "benefit_bhojpuri": "परिवार के 5 लाख रुपया तक के इलाज मुफ्त",
+    "benefit_assamese": "পৰিয়ালৰ বাবে বছৰত ৫ লাখ টকা পৰ্যন্ত বিনামূলীয়া চিকিৎসা",
+    "eligibility": {
+      "income": "BPL families and SECC 2011 listed families",
+      "verification": "Check pmjay.gov.in with Aadhaar/ration card"
+    },
+    "eligibility_bhojpuri": "गरीब परिवार (BPL) जे SECC 2011 में सूचीबद्ध हवें",
+    "eligibility_assamese": "দৰিদ্ৰ পৰিয়াল (BPL) যি SECC 2011ত তালিকাভুক্ত",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Mobile number",
+      "SECC database verification"
+    ],
+    "documents_bhojpuri": [
+      "आधार कार्ड",
+      "राशन कार्ड",
+      "मोबाइल नंबर",
+      "SECC डेटाबेस में नाम होखे के चाही"
+    ],
+    "documents_assamese": [
+      "আধাৰ কাৰ্ড",
+      "ৰেচন কাৰ্ড",
+      "মোবাইল নম্বৰ",
+      "SECC ডেটাবেছত নাম থাকিব লাগিব"
+    ],
+    "apply_steps": [
+      "Step 1: Check eligibility at pmjay.gov.in or call 14555",
+      "Step 2: Visit nearest Ayushman Mitra at empanelled hospital",
+      "Step 3: Get Ayushman card made with Aadhaar",
+      "Step 4: Use card at any empanelled hospital"
+    ],
+    "apply_steps_bhojpuri": [
+      "कदम 1: pmjay.gov.in पर या 14555 पर कॉल करके पात्रता जांचव",
+      "कदम 2: नजदीकी सरकारी अस्पताल में आयुष्मान मित्र से मिलव",
+      "कदम 3: आधार से आयुष्मान कार्ड बनवाव",
+      "कदम 4: कार्ड से किसी भी सूचीबद्ध अस्पताल में इलाज करवाव"
+    ],
+    "apply_steps_assamese": [
+      "পদক্ষেপ ১: pmjay.gov.in বা 14555 নম্বৰত ফোন কৰি যোগ্যতা পৰীক্ষা কৰক",
+      "পদক্ষেপ ২: নিকটৱৰ্তী চৰকাৰী চিকিৎসালয়ত আয়ুষ্মান মিত্ৰক লগ কৰক",
+      "পদক্ষেপ ৩: আধাৰেৰে আয়ুষ্মান কাৰ্ড বনাওক",
+      "পদক্ষেপ ৪: কাৰ্ডেৰে যিকোনো তালিকাভুক্ত চিকিৎসালয়ত চিকিৎসা কৰাওক"
+    ],
+    "helpline": "14555",
+    "website": "https://pmjay.gov.in",
+    "tags": ["health", "hospital", "insurance", "medical"]
+  },
+  "PM_AWAS": {
+    "full_name": "Pradhan Mantri Awas Yojana - Gramin",
+    "bhojpuri_name": "प्रधानमंत्री आवास योजना - ग्रामीण",
+    "assamese_name": "প্ৰধানমন্ত্ৰী আৱাস যোজনা - গ্ৰামীণ",
+    "domain": "housing",
+    "benefit": "₹1.2 lakh (plain areas) or ₹1.3 lakh (hilly/NE states) for house construction",
+    "benefit_bhojpuri": "घर बनाए के लिए 1.2 लाख (मैदानी) या 1.3 लाख (पहाड़ी/NE) रुपया",
+    "benefit_assamese": "ঘৰ নিৰ্মাণৰ বাবে ১.২ লাখ (সমতল) বা ১.৩ লাখ (পাহাৰীয়া/উত্তৰ-পূব) টকা",
+    "eligibility": {
+      "housing": "No pucca house (kutcha or no house)",
+      "list": "Must be in SECC 2011 Permanent Wait List",
+      "income": "BPL/EWS/LIG category"
+    },
+    "eligibility_bhojpuri": "जिनके पास पक्का घर नहीं बा, SECC 2011 सूची में नाम होखे के चाही",
+    "eligibility_assamese": "যাৰ পাকঘৰ নাই, SECC 2011 তালিকাত নাম থাকিব লাগিব",
+    "documents": [
+      "Aadhaar Card",
+      "Job Card (MGNREGA) if available",
+      "Bank account details",
+      "BPL certificate",
+      "Mobile number"
+    ],
+    "documents_bhojpuri": [
+      "आधार कार्ड",
+      "जॉब कार्ड (मनरेगा)",
+      "बैंक खाता",
+      "BPL प्रमाणपत्र",
+      "मोबाइल नंबर"
+    ],
+    "documents_assamese": [
+      "আধাৰ কাৰ্ড",
+      "জব কাৰ্ড (মনৰেগা)",
+      "বেংক একাউণ্ট",
+      "BPL প্ৰমাণপত্ৰ",
+      "মোবাইল নম্বৰ"
+    ],
+    "apply_steps": [
+      "Step 1: Check your name in SECC 2011 list at Gram Panchayat",
+      "Step 2: Apply through Gram Panchayat or CSC",
+      "Step 3: District office verifies eligibility",
+      "Step 4: Money transferred in installments to bank account",
+      "Step 5: Construction monitored via AwaasSoft app"
+    ],
+    "apply_steps_bhojpuri": [
+      "कदम 1: ग्राम पंचायत में SECC 2011 सूची में अपना नाम जांचव",
+      "कदम 2: ग्राम पंचायत या CSC से आवेदन करव",
+      "कदम 3: जिला कार्यालय पात्रता जांचेगा",
+      "कदम 4: पैसा किस्त में बैंक खाते में आई",
+      "कदम 5: निर्माण AwaasSoft ऐप से मॉनीटर होई"
+    ],
+    "apply_steps_assamese": [
+      "পদক্ষেপ ১: গ্ৰাম পঞ্চায়তত SECC 2011 তালিকাত আপোনাৰ নাম পৰীক্ষা কৰক",
+      "পদক্ষেপ ২: গ্ৰাম পঞ্চায়ত বা CSCৰ জৰিয়তে আবেদন কৰক",
+      "পদক্ষেপ ৩: জিলা কাৰ্যালয়ে যোগ্যতা পৰীক্ষা কৰিব",
+      "পদক্ষেপ ৪: টকা কিস্তিত বেংক একাউণ্টত আহিব",
+      "পদক্ষেপ ৫: নিৰ্মাণ AwaasSoft এপৰ জৰিয়তে নিৰীক্ষণ কৰা হ'ব"
+    ],
+    "helpline": "1800-11-6446",
+    "website": "https://pmayg.nic.in",
+    "tags": ["house", "home", "housing", "construction", "shelter"]
+  },
+  "UJJWALA": {
+    "full_name": "Pradhan Mantri Ujjwala Yojana 2.0",
+    "bhojpuri_name": "प्रधानमंत्री उज्ज्वला योजना",
+    "assamese_name": "প্ৰধানমন্ত্ৰী উজ্জ্বলা যোজনা",
+    "domain": "energy",
+    "benefit": "Free LPG connection + ₹1600 deposit + first cylinder free",
+    "benefit_bhojpuri": "मुफ्त LPG कनेक्शन, 1600 रुपया जमा और पहला सिलेंडर मुफ्त",
+    "benefit_assamese": "বিনামূলীয়া LPG সংযোগ, ১৬০০ টকা জমা আৰু প্ৰথম চিলিণ্ডাৰ বিনামূলীয়া",
+    "eligibility": {
+      "gender": "Women aged 18+ only",
+      "category": "BPL, SC/ST, PMAY beneficiary, forest dweller, most backward classes",
+      "restriction": "No existing LPG connection in household"
+    },
+    "eligibility_bhojpuri": "18 साल से ऊपर महिला, BPL/SC/ST परिवार, घर में पहले से LPG नहीं होखे के चाही",
+    "eligibility_assamese": "১৮ বছৰৰ ওপৰৰ মহিলা, BPL/SC/ST পৰিয়াল, ঘৰত আগতে LPG নথকা",
+    "documents": [
+      "Aadhaar Card (woman applicant)",
+      "BPL ration card",
+      "Bank account details",
+      "Passport size photo",
+      "Self-declaration of no LPG connection"
+    ],
+    "documents_bhojpuri": [
+      "महिला आवेदक का आधार कार्ड",
+      "BPL राशन कार्ड",
+      "बैंक खाता",
+      "पासपोर्ट साइज फोटो",
+      "LPG नहीं होने का घोषणापत्र"
+    ],
+    "documents_assamese": [
+      "মহিলা আবেদনকাৰীৰ আধাৰ কাৰ্ড",
+      "BPL ৰেচন কাৰ্ড",
+      "বেংক একাউণ্ট",
+      "পাছপ'ৰ্ট সাইজ ফটো",
+      "LPG নথকাৰ ঘোষণাপত্ৰ"
+    ],
+    "apply_steps": [
+      "Step 1: Visit nearest LPG distributor or go to mylpg.in",
+      "Step 2: Fill Ujjwala application form (KYC2 form)",
+      "Step 3: Submit documents at distributor",
+      "Step 4: Verification done by oil company",
+      "Step 5: Connection released within 7-10 days"
+    ],
+    "apply_steps_bhojpuri": [
+      "कदम 1: नजदीकी LPG वितरक के पास जाव या mylpg.in पर जाव",
+      "कदम 2: उज्ज्वला आवेदन फॉर्म भरव",
+      "कदम 3: वितरक के पास कागज जमा करव",
+      "कदम 4: तेल कंपनी जांच करेगी",
+      "कदम 5: 7-10 दिन में कनेक्शन मिली"
+    ],
+    "apply_steps_assamese": [
+      "পদক্ষেপ ১: নিকটৱৰ্তী LPG বিতৰকৰ ওচৰলৈ যাওক বা mylpg.in লৈ যাওক",
+      "পদক্ষেপ ২: উজ্জ্বলা আবেদন ফৰ্ম পূৰণ কৰক",
+      "পদক্ষেপ ৩: বিতৰকৰ ওচৰত কাগজ জমা দিয়ক",
+      "পদক্ষেপ ৪: তেল কোম্পানীয়ে পৰীক্ষা কৰিব",
+      "পদক্ষেপ ৫: ৭-১০ দিনৰ ভিতৰত সংযোগ পাব"
+    ],
+    "helpline": "1906",
+    "website": "https://pmuy.gov.in",
+    "tags": ["gas", "lpg", "cooking", "cylinder", "women"]
+  },
+  "JAN_DHAN": {
+    "full_name": "Pradhan Mantri Jan Dhan Yojana",
+    "bhojpuri_name": "प्रधानमंत्री जन धन योजना",
+    "assamese_name": "প্ৰধানমন্ত্ৰী জন ধন যোজনা",
+    "domain": "finance",
+    "benefit": "Zero-balance bank account + ₹10000 overdraft + ₹2 lakh accident insurance + ₹30000 life insurance",
+    "benefit_bhojpuri": "बिना पैसा के बैंक खाता, 10000 ओवरड्राफ्ट, 2 लाख दुर्घटना बीमा, 30000 जीवन बीमा",
+    "benefit_assamese": "শূন্য বেলেঞ্চৰ বেংক একাউণ্ট, ১০০০০ অভাৰড্ৰাফ্ট, ২ লাখ দুৰ্ঘটনা বীমা, ৩০০০০ জীৱন বীমা",
+    "eligibility": {
+      "age": "10 years and above",
+      "existing": "People without bank account OR people who want to open second account"
+    },
+    "eligibility_bhojpuri": "10 साल से ऊपर कोई भी व्यक्ति जिनके पास बैंक खाता नहीं बा",
+    "eligibility_assamese": "১০ বছৰৰ ওপৰৰ যিকোনো ব্যক্তি যাৰ বেংক একাউণ্ট নাই",
+    "documents": [
+      "Aadhaar Card (sufficient for KYC)",
+      "OR Voter ID / Driving License",
+      "Passport size photo",
+      "Mobile number"
+    ],
+    "documents_bhojpuri": [
+      "आधार कार्ड (काफी है KYC के लिए)",
+      "या मतदाता पहचान पत्र / ड्राइविंग लाइसेंस",
+      "पासपोर्ट साइज फोटो",
+      "मोबाइल नंबर"
+    ],
+    "documents_assamese": [
+      "আধাৰ কাৰ্ড (KYCৰ বাবে যথেষ্ট)",
+      "বা ভোটাৰ পৰিচয়পত্ৰ / ড্ৰাইভিং লাইচেঞ্চ",
+      "পাছপ'ৰ্ট সাইজ ফটো",
+      "মোবাইল নম্বৰ"
+    ],
+    "apply_steps": [
+      "Step 1: Visit any nationalized bank branch",
+      "Step 2: Ask for Jan Dhan account opening form",
+      "Step 3: Fill form with Aadhaar details",
+      "Step 4: Submit photo and documents",
+      "Step 5: Get RuPay debit card within 7 days"
+    ],
+    "apply_steps_bhojpuri": [
+      "कदम 1: किसी भी राष्ट्रीयकृत बैंक में जाव",
+      "कदम 2: जन धन खाता खोलने का फॉर्म मांगव",
+      "कदम 3: आधार जानकारी से फॉर्म भरव",
+      "कदम 4: फोटो और कागज जमा करव",
+      "कदम 5: 7 दिन में RuPay डेबिट कार्ड मिली"
+    ],
+    "apply_steps_assamese": [
+      "পদক্ষেপ ১: যিকোনো ৰাষ্ট্ৰীয়কৃত বেংক শাখালৈ যাওক",
+      "পদক্ষেপ ২: জন ধন একাউণ্ট খোলাৰ ফৰ্ম বিচাৰক",
+      "পদক্ষেপ ৩: আধাৰ তথ্যেৰে ফৰ্ম পূৰণ কৰক",
+      "পদক্ষেপ ৪: ফটো আৰু কাগজ জমা দিয়ক",
+      "পদক্ষেপ ৫: ৭ দিনৰ ভিতৰত RuPay ডেবিট কাৰ্ড পাব"
+    ],
+    "helpline": "1800-11-0001",
+    "website": "https://pmjdy.gov.in",
+    "tags": ["bank", "account", "finance", "money", "insurance"]
+  },
+  "FASAL_BIMA": {
+    "full_name": "Pradhan Mantri Fasal Bima Yojana",
+    "bhojpuri_name": "प्रधानमंत्री फसल बीमा योजना",
+    "assamese_name": "প্ৰধানমন্ত্ৰী শস্য বীমা যোজনা",
+    "domain": "agriculture",
+    "benefit": "Crop insurance - premium: 2% for Kharif, 1.5% for Rabi, 5% for commercial/horticulture crops",
+    "benefit_bhojpuri": "फसल बीमा - खरीफ में 2%, रबी में 1.5% प्रीमियम, बाकी सरकार देती है",
+    "benefit_assamese": "শস্য বীমা - খাৰিফত ২%, ৰবিত ১.৫% প্ৰিমিয়াম, বাকী চৰকাৰে দিয়ে",
+    "eligibility": {
+      "farmer_type": "All farmers including sharecroppers and tenant farmers",
+      "crop_type": "All food crops, oilseeds, commercial/horticulture crops"
+    },
+    "eligibility_bhojpuri": "सभी किसान, बटाईदार और किरायेदार किसान भी, सभी फसलें शामिल",
+    "eligibility_assamese": "সকলো কৃষক, বৰ্গাদাৰ আৰু ভাড়াতীয়া কৃষকো, সকলো শস্য অন্তৰ্ভুক্ত",
+    "documents": [
+      "Aadhaar Card",
+      "Bank account details",
+      "Land documents / Land lease agreement",
+      "Sowing certificate",
+      "Crop details"
+    ],
+    "documents_bhojpuri": [
+      "आधार कार्ड",
+      "बैंक खाता",
+      "जमीन के कागज या पट्टा",
+      "बुआई प्रमाणपत्र",
+      "फसल का विवरण"
+    ],
+    "documents_assamese": [
+      "আধাৰ কাৰ্ড",
+      "বেংক একাউণ্ট",
+      "মাটিৰ কাগজ বা পট্টা",
+      "বীজ সিঁচা প্ৰমাণপত্ৰ",
+      "শস্যৰ বিৱৰণ"
+    ],
+    "apply_steps": [
+      "Step 1: Apply before sowing season through bank / CSC / PMFBY app",
+      "Step 2: Fill PMFBY application form",
+      "Step 3: Pay premium amount",
+      "Step 4: Get policy document",
+      "Step 5: In case of crop loss, inform within 72 hours via app or helpline"
+    ],
+    "apply_steps_bhojpuri": [
+      "कदम 1: बुआई से पहले बैंक / CSC / PMFBY ऐप से आवेदन करव",
+      "कदम 2: PMFBY आवेदन फॉर्म भरव",
+      "कदम 3: प्रीमियम जमा करव",
+      "कदम 4: पॉलिसी दस्तावेज लव",
+      "कदम 5: फसल नुकसान होने पर 72 घंटे में ऐप या हेल्पलाइन पर सूचित करव"
+    ],
+    "apply_steps_assamese": [
+      "পদক্ষেপ ১: বীজ সিঁচাৰ আগতে বেংক / CSC / PMFBY এপৰ জৰিয়তে আবেদন কৰক",
+      "পদক্ষেপ ২: PMFBY আবেদন ফৰ্ম পূৰণ কৰক",
+      "পদক্ষেপ ৩: প্ৰিমিয়াম জমা দিয়ক",
+      "পদক্ষেপ ৪: পলিচি দস্তাবেজ লওক",
+      "পদক্ষেপ ৫: শস্য ক্ষতি হ'লে ৭২ ঘণ্টাৰ ভিতৰত এপ বা হেল্পলাইনত জনাওক"
+    ],
+    "helpline": "1800-200-7710",
+    "website": "https://pmfby.gov.in",
+    "tags": ["crop", "insurance", "flood", "drought", "farmer", "agriculture"]
+  },
+  "RATION_CARD": {
+    "full_name": "National Food Security Act - Ration Card",
+    "bhojpuri_name": "राशन कार्ड - राष्ट्रीय खाद्य सुरक्षा अधिनियम",
+    "assamese_name": "ৰেচন কাৰ্ড - ৰাষ্ট্ৰীয় খাদ্য নিৰাপত্তা আইন",
+    "domain": "food",
+    "benefit": "Subsidized rice ₹3/kg, wheat ₹2/kg, coarse grain ₹1/kg",
+    "benefit_bhojpuri": "सस्ता चावल 3 रुपया किलो, गेहूं 2 रुपया किलो, मोटा अनाज 1 रुपया किलो",
+    "benefit_assamese": "সস্তা চাউল ৩ টকা কিলো, ঘেঁহু ২ টকা কিলো, মোটা শস্য ১ টকা কিলো",
+    "eligibility": {
+      "income": "PHH (Priority Household) or AAY (Antyodaya Anna Yojana) categories",
+      "income_limit": "Annual income below ₹1 lakh (varies by state)"
+    },
+    "eligibility_bhojpuri": "गरीब परिवार, सालाना आय 1 लाख से कम (राज्य अनुसार)",
+    "eligibility_assamese": "দৰিদ্ৰ পৰিয়াল, বাৰ্ষিক আয় ১ লাখৰ তলত (ৰাজ্য অনুযায়ী)",
+    "documents": [
+      "Aadhaar Cards of all family members",
+      "Income certificate",
+      "Residence proof",
+      "Passport size photos",
+      "Electricity/water bill"
+    ],
+    "documents_bhojpuri": [
+      "परिवार के सभी सदस्यों का आधार कार्ड",
+      "आय प्रमाणपत्र",
+      "निवास प्रमाणपत्र",
+      "पासपोर्ट साइज फोटो",
+      "बिजली/पानी का बिल"
+    ],
+    "documents_assamese": [
+      "পৰিয়ালৰ সকলো সদস্যৰ আধাৰ কাৰ্ড",
+      "আয়ৰ প্ৰমাণপত্ৰ",
+      "বাসস্থানৰ প্ৰমাণ",
+      "পাছপ'ৰ্ট সাইজ ফটো",
+      "বিদ্যুৎ/পানীৰ বিল"
+    ],
+    "apply_steps": [
+      "Step 1: Visit Block Development Office or CSC",
+      "Step 2: Fill ration card application form",
+      "Step 3: Submit all documents",
+      "Step 4: Field verification by officer",
+      "Step 5: Ration card delivered within 30 days"
+    ],
+    "apply_steps_bhojpuri": [
+      "कदम 1: प्रखंड विकास कार्यालय या CSC में जाव",
+      "कदम 2: राशन कार्ड आवेदन फॉर्म भरव",
+      "कदम 3: सभी कागज जमा करव",
+      "कदम 4: अधिकारी द्वारा क्षेत्र सत्यापन होई",
+      "कदम 5: 30 दिन में राशन कार्ड मिली"
+    ],
+    "apply_steps_assamese": [
+      "পদক্ষেপ ১: ব্লক উন্নয়ন কাৰ্যালয় বা CSCলৈ যাওক",
+      "পদক্ষেপ ২: ৰেচন কাৰ্ড আবেদন ফৰ্ম পূৰণ কৰক",
+      "পদক্ষেপ ৩: সকলো কাগজ জমা দিয়ক",
+      "পদক্ষেপ ৪: বিষয়াই ক্ষেত্ৰ পৰীক্ষা কৰিব",
+      "পদক্ষেপ ৫: ৩০ দিনৰ ভিতৰত ৰেচন কাৰ্ড পাব"
+    ],
+    "helpline": "14445",
+    "website": "https://nfsa.gov.in",
+    "tags": ["food", "ration", "rice", "wheat", "BPL", "poor"]
+  }
+}

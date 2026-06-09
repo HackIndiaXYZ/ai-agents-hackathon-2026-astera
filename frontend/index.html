@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asteria — भोजपुरी আসামীয়া AI Agent</title>
+  <meta name="description" content="Asteria is an AI Agent that helps rural Indian citizens access government welfare schemes in Bhojpuri and Assamese." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ── HEADER ─────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">✦</div>
+        <div class="logo-text">
+          <span class="logo-name">Asteria</span>
+          <span class="logo-sub">AI Agent · Adaptive Data</span>
+        </div>
+      </div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-bhojpuri" onclick="setLanguage('bhojpuri')">
+          भोजपुरी
+        </button>
+        <button class="lang-btn" id="btn-assamese" onclick="setLanguage('assamese')">
+          অসমীয়া
+        </button>
+      </div>
+
+      <div class="header-stats">
+        <div class="stat-pill" id="stat-pairs">
+          <span class="stat-num" id="total-pairs">0</span>
+          <span class="stat-label">Q&A Pairs</span>
+        </div>
+        <div class="stat-pill adaption-pill">
+          <span class="adaption-dot"></span>
+          <span class="stat-label">Adaptive Data</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <div class="hero" id="hero-section">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🏆 AI Agents Hackathon 2026 · HackIndia</div>
+      <h1 class="hero-title" id="hero-title">
+        सरकारी योजना के जानकारी<br/>
+        <span class="gradient-text">अपनी भाषा में</span>
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        PM Kisan · Ayushman Bharat · Awas Yojana · Ujjwala · Jan Dhan · Fasal Bima
+      </p>
+      <div class="scheme-chips" id="scheme-chips">
+        <button class="chip" onclick="quickAsk('PM Kisan ke baare mein batao')">🌾 PM Kisan</button>
+        <button class="chip" onclick="quickAsk('Ayushman Bharat ka card kaise banao')">🏥 Ayushman Bharat</button>
+        <button class="chip" onclick="quickAsk('PM Awas Yojana mein apply karna hai')">🏠 PM Awas</button>
+        <button class="chip" onclick="quickAsk('Ujjwala Yojana mein LPG kaise milega')">🔥 Ujjwala</button>
+        <button class="chip" onclick="quickAsk('Jan Dhan account kaise kholein')">🏦 Jan Dhan</button>
+        <button class="chip" onclick="quickAsk('Fasal Bima ke liye kya documents chahiye')">🌱 Fasal Bima</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN LAYOUT ────────────────────────────────────────────── -->
+  <main class="main-layout">
+
+    <!-- LEFT: Chat Panel -->
+    <div class="chat-panel glass">
+      <div class="chat-header">
+        <div class="agent-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">✦</div>
+          <div class="online-dot"></div>
+        </div>
+        <div class="agent-info">
+          <div class="agent-name">Asteria Agent</div>
+          <div class="agent-status" id="agent-status">Ready to help · ReAct Mode</div>
+        </div>
+        <div class="agent-badges">
+          <span class="badge-mini">🧠 ReAct</span>
+          <span class="badge-mini">📊 Adaptive Data</span>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="messages" id="messages">
+        <div class="message agent-msg" id="welcome-msg">
+          <div class="msg-avatar">✦</div>
+          <div class="msg-content">
+            <div class="msg-bubble" id="welcome-bubble">
+              नमस्ते! हऊ Asteria हईं — रउरा सरकारी योजना में मदद करे खातिर। 
+              <br/><br/>
+              <strong>का पूछे के बा?</strong> 🙏
+            </div>
+            <div class="msg-meta">
+              <span class="msg-time">Just now</span>
+              <span class="eval-badge" id="eval-welcome">⭐ Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reasoning Trace (collapsible) -->
+      <div class="reasoning-panel" id="reasoning-panel" style="display:none">
+        <div class="reasoning-header" onclick="toggleReasoning()">
+          <span>🧠 Agent Reasoning</span>
+          <span id="reasoning-arrow">▼</span>
+        </div>
+        <div class="reasoning-steps" id="reasoning-steps"></div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="user-input"
+            placeholder="अपनी बात लिखीं... (Bhojpuri/Assamese mein)"
+            rows="1"
+            onkeydown="handleKeyDown(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button class="send-btn" id="send-btn" onclick="sendMessage()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="input-hints">
+          <span onclick="quickAsk('Kaunse scheme hain?')">📋 Sab scheme dikhao</span>
+          <span onclick="quickAsk('Mujhe help chahiye')">🆘 Help chahiye</span>
+          <span id="current-lang-hint">भोजपुरी में लिखीं</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Info Panel -->
+    <div class="info-panel">
+
+      <!-- Dataset Stats Card -->
+      <div class="card glass stats-card">
+        <div class="card-header">
+          <div class="card-icon">📊</div>
+          <div class="card-title">Adaptive Data Stats</div>
+          <button class="refresh-btn" onclick="loadStats()">↻</button>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-value" id="stat-total">—</div>
+            <div class="stat-desc">Total Q&A Pairs</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value bho" id="stat-bho">—</div>
+            <div class="stat-desc">Bhojpuri Pairs</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value asm" id="stat-asm">—</div>
+            <div class="stat-desc">Assamese Pairs</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value pos" id="stat-pos">—</div>
+            <div class="stat-desc">Positive Feedback</div>
+          </div>
+        </div>
+        <div class="adaption-badge">
+          <img src="https://adaption.ai/favicon.ico" onerror="this.style.display='none'" width="16" height="16"/>
+          Powered by <strong>Adaptive Data · Adaption</strong>
+        </div>
+        <button class="export-btn" onclick="exportToHuggingFace()">
+          🤗 Export to HuggingFace
+        </button>
+      </div>
+
+      <!-- Current Scheme Card -->
+      <div class="card glass scheme-card" id="scheme-card" style="display:none">
+        <div class="card-header">
+          <div class="card-icon">📋</div>
+          <div class="card-title" id="scheme-card-title">Scheme Info</div>
+        </div>
+        <div id="scheme-card-body"></div>
+      </div>
+
+      <!-- Step Progress Card -->
+      <div class="card glass step-card" id="step-card" style="display:none">
+        <div class="card-header">
+          <div class="card-icon">📝</div>
+          <div class="card-title">Application Progress</div>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="step-counter">Step <span id="step-current">1</span> of <span id="step-total">7</span></div>
+        <button class="next-step-btn" onclick="goNextStep()">
+          Next Step →
+        </button>
+      </div>
+
+      <!-- Pipeline Card -->
+      <div class="card glass pipeline-card">
+        <div class="card-header">
+          <div class="card-icon">🔄</div>
+          <div class="card-title">Evaluation Pipeline</div>
+        </div>
+        <div class="pipeline-steps">
+          <div class="pipeline-step" id="pipe-ingest">
+            <div class="pipe-icon">📥</div>
+            <div class="pipe-info">
+              <div class="pipe-name">Ingest</div>
+              <div class="pipe-status">Q&A pairs collected</div>
+            </div>
+            <div class="pipe-check">✓</div>
+          </div>
+          <div class="pipeline-step" id="pipe-adapt">
+            <div class="pipe-icon">⚙️</div>
+            <div class="pipe-info">
+              <div class="pipe-name">Adapt</div>
+              <div class="pipe-status">Feedback loop active</div>
+            </div>
+            <div class="pipe-check">✓</div>
+          </div>
+          <div class="pipeline-step" id="pipe-evaluate">
+            <div class="pipe-icon">🔍</div>
+            <div class="pipe-info">
+              <div class="pipe-name">Evaluate</div>
+              <div class="pipe-status">Auto-scoring responses</div>
+            </div>
+            <div class="pipe-check">✓</div>
+          </div>
+          <div class="pipeline-step" id="pipe-export">
+            <div class="pipe-icon">🚀</div>
+            <div class="pipe-info">
+              <div class="pipe-name">Export</div>
+              <div class="pipe-status">HuggingFace · Kaggle</div>
+            </div>
+            <div class="pipe-check" id="export-check">○</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── LOADING OVERLAY ────────────────────────────────────────── -->
+  <div class="thinking-overlay" id="thinking-overlay">
+    <div class="thinking-card">
+      <div class="thinking-animation">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+      <div class="thinking-text" id="thinking-text">Agent is thinking...</div>
+      <div class="thinking-steps" id="thinking-steps"></div>
+    </div>
+  </div>
+
+  <!-- ── EXPORT MODAL ───────────────────────────────────────────── -->
+  <div class="modal-overlay" id="export-modal" style="display:none">
+    <div class="modal glass">
+      <div class="modal-header">
+        <h3>🤗 Export to HuggingFace</h3>
+        <button onclick="closeExportModal()">✕</button>
+      </div>
+      <div class="modal-body" id="export-modal-body">
+        <div class="export-loading">Exporting dataset...</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

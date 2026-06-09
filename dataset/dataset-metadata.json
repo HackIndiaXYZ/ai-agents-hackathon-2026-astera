@@ -1,0 +1,23 @@
+{
+  "title": "Asteria Bhojpuri and Assamese Civic QA",
+  "subtitle": "Low-resource dataset for Indian government schemes.",
+  "id": "mdafjalquraishi/asteria-civic-qa",
+  "description": "## 🌟 Asteria: Low-Resource Civic Q&A Dataset\n\nWelcome to the **Asteria Civic Q&A Dataset**! This dataset was built to empower AI agents to assist rural Indian citizens in their native dialects (**Bhojpuri** and **Assamese**) with navigating essential government schemes.\n\n### 🎯 Purpose\nCreated for the **AI Agent Hackathon 2026**, this dataset addresses the critical gap in low-resource language support for public services. It provides a highly specialized, domain-specific foundation for AI agents handling civic queries.\n\n### 📊 Dataset Statistics\n- **Total Q&A Pairs:** 1,228\n- **Bhojpuri (bho):** 636 pairs\n- **Assamese (asm):** 592 pairs\n- **Generation Method:** 100% Synthetic (Gemini 2.5 Flash via Vertex AI)\n- **Evaluation:** Evaluated and pushed via the Adaptive Data Platform.\n\n### 🏛️ Domain Coverage (Government Schemes)\nThe dataset covers high-impact Indian government schemes:\n- 🌾 **PM Kisan Samman Nidhi** (Agriculture)\n- 🏥 **Ayushman Bharat** (Healthcare)\n- 🏠 **PM Awas Yojana** (Housing)\n- ⛽ **PM Ujjwala Yojana** (Energy/LPG)\n- 🏦 **PM Jan Dhan Yojana** (Financial Inclusion)\n- 🌾 **PM Fasal Bima Yojana** (Crop Insurance)\n- 🍚 **Ration Card Services** (Food Security)\n\n### 💡 Key Features\n1. **Authentic Dialects:** Uses rural linguistic nuances (e.g., *बा/बाटे* in Bhojpuri, *আছিল/কৰিব* in Assamese) rather than formal textbook translation.\n2. **Intent-Driven:** Tagged with specific user intents (`APPLY_SCHEME`, `CHECK_ELIGIBILITY`, `GET_DOCUMENTS`, `KNOW_SCHEME`).\n3. **Adaptive Feedback Loop:** Fully compatible with the **Adaption API**. The dataset is designed to grow and refine based on real user interactions.\n\n--- \n*Special thanks to Adaption for providing the Adaptive Data platform.*",
+  "keywords": [
+    "india",
+    "nlp",
+    "civic",
+    "government",
+    "bhojpuri",
+    "assamese",
+    "adaption",
+    "ai",
+    "llm",
+    "synthetic"
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ]
+}
