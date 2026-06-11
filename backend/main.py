@@ -38,7 +38,7 @@ app.add_middleware(
 # Serve frontend static files
 FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "..", "frontend")
 if os.path.exists(FRONTEND_DIR):
-    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
 
 
 # ─── Request/Response Models ──────────────────────────────────────────────────
@@ -104,13 +104,13 @@ async def log_to_adaption(
 
 # ─── Routes ───────────────────────────────────────────────────────────────────
 
-@app.get("/")
-async def serve_frontend():
-    """Serve the frontend"""
-    frontend_path = os.path.join(FRONTEND_DIR, "index.html")
-    if os.path.exists(frontend_path):
-        return FileResponse(frontend_path)
-    return {"message": "Asteria API is running!", "docs": "/docs"}
+# @app.get("/")
+# async def serve_frontend():
+#     \"\"\"Serve the frontend\"\"\"
+#     frontend_path = os.path.join(FRONTEND_DIR, "index.html")
+#     if os.path.exists(frontend_path):
+#         return FileResponse(frontend_path)
+#     return {"message": "Asteria API is running!", "docs": "/docs"}
 
 
 @app.get("/health")
