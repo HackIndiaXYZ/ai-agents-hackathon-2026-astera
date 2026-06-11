@@ -3,6 +3,7 @@ Asteria FastAPI Backend — Main Application
 Full AI Agent API with Adaptive Data integration
 """
 import os
+import sys
 import uuid
 import asyncio
 from fastapi import FastAPI, HTTPException, BackgroundTasks
@@ -14,6 +15,9 @@ from typing import Optional
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# ─── Path fix: works both locally (run from /backend) and in Docker (backend.main) ─
+sys.path.insert(0, os.path.dirname(__file__))
 
 from agent.orchestrator import asteria_agent
 from adaption.client import adaption_client
@@ -35,10 +39,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Serve frontend static files
+# ─── Frontend directory path (used in routes below) ─────────────────────────
 FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "..", "frontend")
-if os.path.exists(FRONTEND_DIR):
-    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
 
 
 # ─── Request/Response Models ──────────────────────────────────────────────────
@@ -106,7 +108,6 @@ async def log_to_adaption(
 
 # @app.get("/")
 # async def serve_frontend():
-#     \"\"\"Serve the frontend\"\"\"
 #     frontend_path = os.path.join(FRONTEND_DIR, "index.html")
 #     if os.path.exists(frontend_path):
 #         return FileResponse(frontend_path)
@@ -284,3 +285,24 @@ if __name__ == "__main__":
         port=int(os.getenv("PORT", 8000)),
         reload=True
     )
+
+# ─── Serve Frontend (MUST be LAST — after all API routes) ────────────────────
+# Mount static assets (/app.js, /style.css etc.)
+if os.path.exists(FRONTEND_DIR):
+    app.mount("/static-assets", StaticFiles(directory=FRONTEND_DIR), name="static")
+
+@app.get("/")
+async def serve_root():
+    """Serve the frontend SPA"""
+    frontend_path = os.path.join(FRONTEND_DIR, "index.html")
+    if os.path.exists(frontend_path):
+        return FileResponse(frontend_path)
+    return {"message": "Asteria API is running!", "docs": "/docs"}
+
+@app.get("/app.js")
+async def serve_js():
+    return FileResponse(os.path.join(FRONTEND_DIR, "app.js"), media_type="application/javascript")
+
+@app.get("/style.css")
+async def serve_css():
+    return FileResponse(os.path.join(FRONTEND_DIR, "style.css"), media_type="text/css")
