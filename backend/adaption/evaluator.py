@@ -8,7 +8,12 @@ from google import genai
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
-client = genai.Client(vertexai=True, project="asteria-497909", location="us-central1")
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if GEMINI_API_KEY:
+    client = genai.Client(api_key=GEMINI_API_KEY)
+else:
+    client = genai.Client(vertexai=True, project="asteria-497909", location="us-central1")
 
 
 class EvaluationAgent:

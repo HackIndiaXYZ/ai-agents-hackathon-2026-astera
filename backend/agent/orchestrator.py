@@ -20,7 +20,12 @@ if "GCP_CREDENTIALS_JSON" in os.environ:
         f.write(os.environ["GCP_CREDENTIALS_JSON"])
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = f.name
 
-client = genai.Client(vertexai=True, project="asteria-497909", location="us-central1")
+# Use Gemini API key if available (Cloud Run), otherwise use Vertex AI (local)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if GEMINI_API_KEY:
+    client = genai.Client(api_key=GEMINI_API_KEY)
+else:
+    client = genai.Client(vertexai=True, project="asteria-497909", location="us-central1")
 
 # ─── Intent Types ─────────────────────────────────────────────────────────────
 INTENTS = {
