@@ -4,6 +4,9 @@ __pycache__/
 venv/
 .env
 
+# Secrets
+service_account.json
+
 # Node / JS
 node_modules/
 
@@ -14,3 +17,9 @@ node_modules/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Unnecessary for runtime
+dataset/
+scripts/
+START.bat
+*.md
