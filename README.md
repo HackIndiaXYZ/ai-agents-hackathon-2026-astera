@@ -24,7 +24,7 @@ pinned: false
 
   <p align="center">
     <a href="https://huggingface.co/datasets/Afuu-coder/asteria-bhojpuri-assamese-civic-qa"><img src="https://img.shields.io/badge/🤗_Dataset-HuggingFace-FFD21E.svg?style=for-the-badge&logo=huggingface&logoColor=black" alt="HuggingFace"></a>
-    <a href="https://huggingface.co/spaces/Afuu-coder/asteria-civic-agent"><img src="https://img.shields.io/badge/🚀_Live_Demo-HF_Spaces-blue.svg?style=for-the-badge&logo=huggingface&logoColor=white" alt="Live Demo"></a>
+    <a href="https://asteria-civic-agent-938171168741.us-central1.run.app"><img src="https://img.shields.io/badge/🚀_Live_Demo-Cloud_Run-4285F4.svg?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Live Demo"></a>
     <a href="https://adaption.ai"><img src="https://img.shields.io/badge/Powered_by-Adaption-7C5CFC.svg?style=for-the-badge" alt="Adaption"></a>
   </p>
   
@@ -49,7 +49,7 @@ India has hundreds of millions of citizens who communicate exclusively in region
 | 🗣️ **Dual Low-Resource Focus** | Native support for **Bhojpuri** and **Assamese**, trained using high-quality prompt-engineered pipelines via Gemini 1.5 Flash. |
 | 📊 **Adaptive Data Loop** | Features a full data pipeline: Ingest → Adapt → Auto-Evaluate → Export. It scores its own factuality and learns from user feedback. |
 | ✨ **Premium Glassmorphism UI** | A stunning, lightweight, pure HTML/CSS/JS frontend featuring animated UI components, custom tooltips, and real-time reasoning traces. |
-| 🚀 **HuggingFace Native** | Containerized with Docker and instantly deployable to Hugging Face Spaces. |
+| 🚀 **Google Cloud Run** | Containerized with Docker and deployed to Google Cloud Run for professional scalability. |
 
 ---
 
@@ -95,7 +95,7 @@ graph TD
 - **Agent Framework:** Custom ReAct Engine
 - **Data Platform:** Adaption Python SDK
 - **Frontend:** Vanilla JavaScript, Glassmorphism CSS, HTML5
-- **Deployment:** Docker, Hugging Face Spaces
+- **Deployment:** Docker, Google Cloud Run
 
 ---
 
@@ -131,19 +131,22 @@ Open your browser and navigate to:
 
 ---
 
-## 🐳 Deploy to Hugging Face Spaces
+## ☁️ Deploy to Google Cloud Run
 
-This project is fully Dockerized and ready for Hugging Face Spaces.
+This project is fully Dockerized and optimized for Google Cloud Run.
 
-1. Create a new **Docker** Space on Hugging Face.
-2. Add your API keys (`GEMINI_API_KEY`, `ADAPTION_API_KEY`) to the Space's **Settings -> Variables and Secrets**.
-3. Push the code:
+1. Ensure you have the `gcloud` CLI installed and authenticated.
+2. Enable necessary APIs and assign proper IAM roles to your service account (e.g., `aiplatform.user`).
+3. Deploy directly using the source code:
 ```bash
-git init
-git add .
-git commit -m "Deploy Asteria"
-git remote add origin https://huggingface.co/spaces/Afuu-coder/asteria-civic-agent
-git push -u origin main --force
+gcloud run deploy asteria-civic-agent \
+  --source . \
+  --project YOUR_PROJECT_ID \
+  --region us-central1 \
+  --platform managed \
+  --allow-unauthenticated \
+  --port 8080 \
+  --set-env-vars "GEMINI_API_KEY=your_key,ADAPTION_API_KEY=your_key,ADAPTION_BASE_URL=https://api.adaption.ai"
 ```
 
 ---
