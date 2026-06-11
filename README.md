@@ -88,6 +88,17 @@ graph TD
 
 ---
 
+## 🔁 Powered by Adaption AI
+
+Asteria heavily integrates **[Adaption](https://adaption.ai)** to ensure continuous improvement and factuality. Rather than just relying on standard LLM responses, we use the Adaption Python SDK to build a robust feedback loop:
+
+- **Session Tracking:** Every user chat session is traced and logged into the Adaption platform for deep analytics.
+- **Auto-Evaluation:** Asteria uses a background evaluator agent that automatically grades the ReAct agent's responses based on `Factuality` and `Tone` using Adaption's evaluation suite.
+- **User Feedback Loop:** The frontend features Thumbs Up/Down buttons that send immediate RLHF (Reinforcement Learning from Human Feedback) signals back to the Adaption dataset.
+- **Synthetic Data Generation:** High-quality interactions are tagged and exported to Hugging Face to build the ultimate open-source Civic QA dataset for Low-Resource Languages.
+
+---
+
 ## 💻 Tech Stack
 
 - **Backend:** Python, FastAPI, Uvicorn
