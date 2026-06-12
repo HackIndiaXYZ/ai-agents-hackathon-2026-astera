@@ -73,17 +73,17 @@ Asteria isn't just a wrapper; it's a living ecosystem of data.
 
 ```mermaid
 graph TD
-    User([User asks in Bhojpuri/Assamese]) --> Agent[Asteria ReAct Agent]
-    Agent <--> Tools[(Govt Schemes DB Tools)]
-    Agent --> Response[Generates Localized Response]
+    User(["User asks in Bhojpuri/Assamese"]) --> Agent["Asteria ReAct Agent"]
+    Agent <--> Tools[("Govt Schemes DB Tools")]
+    Agent --> Response["Generates Localized Response"]
     
-    Response --> Eval[Auto-Evaluation Pipeline]
-    Eval --> Score{Factuality & Tone Check}
+    Response --> Eval["Auto-Evaluation Pipeline"]
+    Eval --> Score{"Factuality & Tone Check"}
     
-    Score --> Adaption[Pushed to Adaption DB]
-    User -.-> |Clicks Correct/Wrong| Adaption
+    Score --> Adaption["Pushed to Adaption DB"]
+    User -.->|Clicks Correct/Wrong| Adaption
     
-    Adaption --> Export[(HuggingFace & Kaggle)]
+    Adaption --> Export[("HuggingFace & Kaggle")]
 ```
 
 ---
