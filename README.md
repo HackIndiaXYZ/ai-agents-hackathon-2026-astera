@@ -25,7 +25,7 @@ pinned: false
   <p align="center">
     <a href="https://huggingface.co/datasets/Afuu-coder/asteria-bhojpuri-assamese-civic-qa"><img src="https://img.shields.io/badge/🤗_Dataset-HuggingFace-FFD21E.svg?style=for-the-badge&logo=huggingface&logoColor=black" alt="HuggingFace"></a>
     <a href="https://asteria-civic-agent-938171168741.us-central1.run.app"><img src="https://img.shields.io/badge/🚀_Live_Demo-Cloud_Run-4285F4.svg?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Live Demo"></a>
-    <a href="https://adaption.ai"><img src="https://img.shields.io/badge/Powered_by-Adaption-7C5CFC.svg?style=for-the-badge" alt="Adaption"></a>
+    <a href="https://adaptionlabs.ai/"><img src="https://img.shields.io/badge/Powered_by-Adaption-7C5CFC.svg?style=for-the-badge" alt="Adaption"></a>
   </p>
   
   <p align="center"><b>Built for the AI Agents Hackathon 2026 · HackIndia</b></p>
@@ -90,7 +90,7 @@ graph TD
 
 ## 🔁 Powered by Adaption AI
 
-Asteria heavily integrates **[Adaption](https://adaption.ai)** to ensure continuous improvement and factuality. Rather than just relying on standard LLM responses, we use the Adaption Python SDK to build a robust feedback loop:
+Asteria heavily integrates **[Adaption](https://adaptionlabs.ai/)** to ensure continuous improvement and factuality. Rather than just relying on standard LLM responses, we use the Adaption Python SDK to build a robust feedback loop:
 
 - **Session Tracking:** Every user chat session is traced and logged into the Adaption platform for deep analytics.
 - **Auto-Evaluation:** Asteria uses a background evaluator agent that automatically grades the ReAct agent's responses based on `Factuality` and `Tone` using Adaption's evaluation suite.
